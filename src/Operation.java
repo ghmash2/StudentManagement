@@ -19,16 +19,16 @@ public class Operation {
 
     Operation(){
 
-        Student student1 = new Student("Sadik Ahmed", 8, "Math", 70.0, 30, 30.0);
-        Student student2 = new Student("Mahmud Pavel", 9, "English", 80.0, 62, 62.0);
-        Student student3 = new Student("Tirtha Roy", 10, "Bangla", 85.0, 48, 48.0);
-        Student student4 = new Student("Tapu Das", 10, "Math", 70.0, 75, 75.0);
-        Student student5 = new Student("Ekramul Islam", 9, "English", 75.0, 70, 70.0);
-        Student student6 = new Student("Soumik Sarkar", 8, "Bangla", 55.0, 50, 50.0);
-        Student student7 = new Student("Asif Mesbah", 10, "Math", 95.0, 95, 95.0);
-        Student student8 = new Student("Sumit Chy", 8, "English", 65.0, 20, 20.0);
-        Student student9 = new Student("Pial Khan", 9, "Bangla", 75.0, 80, 80.0);
-        Student student10 = new Student("Munshi Saif", 9, "Math", 85.0, 70, 70.0);
+        Student student1 = new Student("Sadik", 8, "Math", 70.0, 30, 30.0);
+        Student student2 = new Student("Mahmud", 9, "English", 80.0, 62, 62.0);
+        Student student3 = new Student("Tirtha", 10, "Bangla", 85.0, 48, 48.0);
+        Student student4 = new Student("Tapu", 10, "Math", 70.0, 75, 75.0);
+        Student student5 = new Student("Ekramul", 9, "English", 75.0, 70, 70.0);
+        Student student6 = new Student("Soumik", 8, "Bangla", 55.0, 50, 50.0);
+        Student student7 = new Student("Asif", 10, "Math", 95.0, 95, 95.0);
+        Student student8 = new Student("Sumit", 8, "English", 65.0, 20, 20.0);
+        Student student9 = new Student("Pial", 9, "Bangla", 75.0, 80, 80.0);
+        Student student10 = new Student("Munshi", 9, "Math", 85.0, 70, 70.0);
         studentData.add(student1);
         studentData.add(student2);
         studentData.add(student3);
@@ -137,13 +137,13 @@ public class Operation {
 
     public void deleteStudent(){
         System.out.println("Enter Student Name Want to Delete : ");
-       
-        String name = input.nextLine();
-
+        //input.nextLine();
+        String name = input.next();
+        //input.nextLine();
         Student student = searchStudent(name);
         if(student != null){
             studentData.remove(student);
-            System.out.println(student + " is deleted.");
+            System.out.println(student.getName() + " is deleted.");
         }
     }
 
